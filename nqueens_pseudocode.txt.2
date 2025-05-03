@@ -1,0 +1,26 @@
+Hill-Climbing Algorithm for N-Queens Problem
+
+1. Initialize:
+   - Randomly place N queens on an N×N board (one queen per row).
+   - Set steps = 0.
+
+2. Repeat until a solution is found:
+   - Calculate the number of conflicts (heuristic):
+     - A conflict occurs when two queens are in the same row, column, or diagonal.
+
+   - If no conflicts exist, the board is a solution. Return the board and exit.
+
+   - Generate all neighbors:
+     - For each queen, consider all possible moves within its row.
+     - For each move, create a new board configuration.
+
+   - Evaluate the neighbors:
+     - For each neighbor, calculate the number of conflicts.
+     - Select the neighbor with the least number of conflicts.
+
+   - If no improvement is made (i.e., all neighbors have equal or more conflicts):
+     - Restart the search with a new random configuration.
+
+3. Return the solution and number of steps taken.
+
+End.
